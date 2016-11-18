@@ -16,8 +16,7 @@ var gulp         = require('gulp'),
 
 gulp.task('css-libs', function() {
 	return gulp.src([
-			'node_modules/normalize.css/normalize.css',
-			'node_modules/font-awesome/css/font-awesome.min.css'
+			'node_modules/normalize.css/normalize.css'
 		])
 		.pipe(concat('libs.css'))
 		.pipe(cssnano())

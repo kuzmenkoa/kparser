@@ -29,5 +29,8 @@
     "gulp-sourcemaps": "^2.2.0",
     "gulp-uglifyjs": "^0.6.2",
     "imagemin-pngquant": "^5.0.0"
+  },
+  "dependencies": {
+    "normalize.css": "^5.0.0"
   }
 }
