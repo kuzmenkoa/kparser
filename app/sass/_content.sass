@@ -1,0 +1,99 @@
+.content
+	.wrapper
+		h1
+			margin: 80px 0
+			color: $lightblue
+			font-size: 36px
+			font-weight: 700
+			text-align: center
+
+		.form
+			display: flex
+			justify-content: space-between
+			align-items: center
+			box-sizing: border-box
+			padding: 18px
+			width: 100%
+			height: 86px
+			background-color: #fff
+			border: 1px solid rgba(214, 214, 214, 0.2)
+			box-shadow: 0 0 7px rgba(0, 48, 40, 0.05)
+
+			.form__search
+				box-sizing: border-box
+				margin-right: 18px
+				width: 100%
+				height: 100%
+				color: #292929
+				font-weight: 500
+				border: none
+				outline: none
+			
+			.form__btns
+				display: flex
+				align-items: center
+				height: 100%
+
+				.form__select
+					display: flex
+					justify-content: center
+					align-items: center
+					box-sizing: border-box
+					padding: 18px
+					white-space: nowrap
+					margin-right: 18px
+					height: 100%
+					color: $lightgray
+					font-size: 15px
+					background-color: $verylightgray
+					cursor: pointer
+					&:hover
+						background-color: $highlightgray
+
+					img
+						margin-left: 18px
+						width: 7px
+						height: 11px
+
+				.form__play
+					display: flex
+					justify-content: center
+					align-items: center
+					width: 60px
+					height: 100%
+					background-color: $green
+					cursor: pointer
+					&:hover
+						background-color: $darkgreen
+
+					img
+						width: 16px
+						height: 25px
+
+		.form-addon
+			position: relative
+			margin-top: 64px
+			width: 100%
+			height: 67px
+			box-sizing: border-box
+			background-color: $verylightgray
+			border: 1px solid rgba(214, 214, 214, 0.2)
+			box-shadow: 0 0 7px rgba(0, 48, 40, 0.05)
+			&::after
+				position: absolute
+				top: -3px
+				left: 0
+				width: 100%
+				height: 3px
+				background-color: #bcc3c9
+				content: ''
+			&::before
+				position: absolute
+				top: -13px
+				left: 83px
+				width: 0
+				height: 0
+				border-right: 10px solid transparent
+				border-bottom: 10px solid #bcc3c9
+				border-left: 10px solid transparent
+				content: ''
