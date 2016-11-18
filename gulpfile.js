@@ -11,7 +11,8 @@ var gulp         = require('gulp'),
 	imagemin     = require('gulp-imagemin'),
 	pngquant     = require('imagemin-pngquant'),
 	cache        = require('gulp-cache'),
-	autoprefixer = require('gulp-autoprefixer');
+	autoprefixer = require('gulp-autoprefixer'),
+	rigger       = require('gulp-rigger');
 
 gulp.task('css-libs', function() {
 	return gulp.src([
@@ -69,7 +70,9 @@ gulp.task('clean', function() {
 });
 
 gulp.task('push', function() {
-	return gulp.src('app/**/**/*.html').pipe(gulp.dest('dist'));
+	return gulp.src('app/index.html')
+		.pipe(rigger())
+		.pipe(gulp.dest('dist'));
 });
 
 gulp.task('init', [
