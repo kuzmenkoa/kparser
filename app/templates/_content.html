@@ -18,65 +18,92 @@
 			</div>
 		</div>
 		<div class="form-addon-tabs">
-			<div class="form-addon-tabs__tab form-addon-tabs__tab--active">
+			<div class="form-addon-tabs__tab">
 				Additional words
 			</div>
 			<div class="form-addon-tabs__divider"></div>
-			<div class="form-addon-tabs__tab">
+			<div class="form-addon-tabs__tab form-addon-tabs__tab--active">
 				Advanced filter
 			</div>
 		</div>
 		<div class="form-addon">
-			<div class="form-addon__radio-wrapper">
-				<div class="form-addon__radio">
-					<input type="radio" id="radio-before" name="form-addon__radio" checked>
-					<label for="radio-before">Before</label>
-					<div class="form-addon__check">
-						<div class="form-addon__inside"></div>
+			<div class="form-addon__words">
+				<div class="form-addon__radio-wrapper">
+					<div class="form-addon__radio">
+						<input type="radio" id="radio-before" name="form-addon__radio" checked>
+						<label for="radio-before">Before</label>
+						<div class="form-addon__check">
+							<div class="form-addon__inside"></div>
+						</div>
+					</div>
+					<div class="form-addon__radio">
+						<input type="radio" id="radio-after" name="form-addon__radio">
+						<label for="radio-after">After</label>
+						<div class="form-addon__check">
+							<div class="form-addon__inside"></div>
+						</div>
 					</div>
 				</div>
-				<div class="form-addon__radio">
-					<input type="radio" id="radio-after" name="form-addon__radio">
-					<label for="radio-after">After</label>
-					<div class="form-addon__check">
-						<div class="form-addon__inside"></div>
+				<div class="form-addon__checkbox-wrapper">
+					<div class="form-addon__checkbox">
+						<input type="checkbox" id="alphabets" name="form-addon__checkbox">
+						<label for="alphabets">Alphabets</label>
+						<div class="form-addon__check">
+							<div class="form-addon__inside"></div>
+						</div>
+					</div>
+					<div class="form-addon__checkbox">
+						<input type="checkbox" id="numbers" name="form-addon__checkbox">
+						<label for="numbers">Numbers</label>
+						<div class="form-addon__check">
+							<div class="form-addon__inside"></div>
+						</div>
+					</div>
+					<div class="form-addon__checkbox">
+						<input type="checkbox" id="questions" name="form-addon__checkbox">
+						<label for="questions">Questions</label>
+						<div class="form-addon__check">
+							<div class="form-addon__inside"></div>
+						</div>
+					</div>
+					<div class="form-addon__checkbox">
+						<input type="checkbox" id="prepositions" name="form-addon__checkbox">
+						<label for="prepositions">Prepositions</label>
+						<div class="form-addon__check">
+							<div class="form-addon__inside"></div>
+						</div>
+					</div>
+					<div class="form-addon__checkbox">
+						<input type="checkbox" id="custom-text" name="form-addon__checkbox">
+						<label for="custom-text">Custom text</label>
+						<div class="form-addon__check">
+							<div class="form-addon__inside"></div>
+						</div>
 					</div>
 				</div>
 			</div>
-			<div class="form-addon__checkbox-wrapper">
-				<div class="form-addon__checkbox">
-					<input type="checkbox" id="alphabets" name="form-addon__checkbox">
-					<label for="alphabets">Alphabets</label>
-					<div class="form-addon__check">
-						<div class="form-addon__inside"></div>
-					</div>
+			<div class="form-addon__filter">
+				<div class="form-addon__col">
+					<div class="form-addon__header">Scan depth</div>
+					<select name="form-addon__select">
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+					</select>
 				</div>
-				<div class="form-addon__checkbox">
-					<input type="checkbox" id="numbers" name="form-addon__checkbox">
-					<label for="numbers">Numbers</label>
-					<div class="form-addon__check">
-						<div class="form-addon__inside"></div>
-					</div>
+				<div class="form-addon__col">
+					<div class="form-addon__header">Include keywords</div>
+					<textarea name="include_keywords"></textarea>
 				</div>
-				<div class="form-addon__checkbox">
-					<input type="checkbox" id="questions" name="form-addon__checkbox">
-					<label for="questions">Questions</label>
-					<div class="form-addon__check">
-						<div class="form-addon__inside"></div>
-					</div>
+				<div class="form-addon__col">
+					<div class="form-addon__header">Exclude keywords</div>
+					<textarea name="exclude_keywords"></textarea>
 				</div>
-				<div class="form-addon__checkbox">
-					<input type="checkbox" id="prepositions" name="form-addon__checkbox">
-					<label for="prepositions">Prepositions</label>
-					<div class="form-addon__check">
-						<div class="form-addon__inside"></div>
-					</div>
-				</div>
-				<div class="form-addon__checkbox">
-					<input type="checkbox" id="custom-text" name="form-addon__checkbox">
-					<label for="custom-text">Custom text</label>
-					<div class="form-addon__check">
-						<div class="form-addon__inside"></div>
+				<div class="form-addon__col">
+					<div class="form-addon__save">
+						Save filters
 					</div>
 				</div>
 			</div>
