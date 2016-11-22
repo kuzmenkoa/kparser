@@ -310,3 +310,117 @@
 						cursor: pointer
 						&:hover
 							background-color: $darkblue
+
+		.result-wrapper
+			display: flex
+			flex-wrap: wrap
+
+			.export-wrapper
+				display: flex
+				justify-content: flex-end
+				margin: 20px 0
+				width: 100%
+
+				.export-btn
+					display: flex
+					justify-content: center
+					align-items: center
+					width: 138px
+					height: 35px
+					color: #fff
+					font-size: 15px
+					font-weight: 500
+					background-color: $lightblue
+					cursor: pointer
+					&:hover
+						background-color: $darkblue
+
+			.categories
+				max-width: 300px
+				width: 100%
+				height: auto
+				background-color: $verylightgray
+				box-shadow: 0 0 7px rgba(0, 48, 40, 0.05)
+
+				.categories__header
+					display: flex
+					align-items: center
+					padding: 0 20px
+					box-sizing: border-box
+					width: 100%
+					height: 46px
+					background-color: #ebf0f4
+					box-shadow: inset 0 -1px 0 #e3e8ec
+					color: #303d80
+					font-size: 14px
+					font-weight: 500
+
+				.categories__item
+					position: relative
+					display: flex
+					justify-content: space-between
+					align-items: center
+					padding: 0 20px
+					height: 52px
+					border-bottom: 1px solid #ebf0f4
+					font-size: 14px
+					&:hover
+						.categories__check::before
+							opacity: 0.5
+
+					input
+						position: absolute
+						visibility: hidden
+			
+					label
+						position: relative
+						z-index: 9
+						display: flex
+						align-items: center
+						width: 100%
+						height: 100%
+						color: #bcc0c2
+						cursor: pointer
+
+						span
+							margin-left: 3px
+							color: #bcc0c2
+					
+					input:checked ~ .categories__check::before
+						opacity: 1
+
+					input:checked ~ label
+						color: #7c7f80
+
+						span
+							color: #a9acae
+
+					.categories__check
+						position: absolute
+						display: block
+						top: 50%
+						right: 20px
+						z-index: 5
+						transform: translate(0, -50%)
+						width: 21px
+						height: 21px
+						background-color: #dde3e7
+						box-shadow: inset 0 1px 0 #bcc3c9
+
+					.categories__check::before 
+						display: flex
+						justify-content: center
+						align-items: center
+						position: absolute
+						margin: auto
+						top: 3px
+						left: 3px
+						width: 15px
+						height: 15px
+						background-color: $green
+						box-shadow: inset 0 -1px 0 #4ba051
+						opacity: 0
+						content: url("../img/ico/check.png")
+
+			.result
+				width: 100%
