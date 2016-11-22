@@ -1,4 +1,4 @@
-window.onload = function() {
+function toggleTableCheckbox() {
 	var table = document.getElementsByClassName('result')[0];
 	table.onclick = function(event) {
 		var target = event.target;
