@@ -36,53 +36,39 @@
 					<div class="form-addon__radio">
 						<input type="radio" id="radio-before" name="form-addon__radio" checked>
 						<label for="radio-before">Before</label>
-						<div class="form-addon__check">
-							<div class="form-addon__inside"></div>
-						</div>
+						<div class="form-addon__check"></div>
 					</div>
 					<div class="form-addon__radio">
 						<input type="radio" id="radio-after" name="form-addon__radio">
 						<label for="radio-after">After</label>
-						<div class="form-addon__check">
-							<div class="form-addon__inside"></div>
-						</div>
+						<div class="form-addon__check"></div>
 					</div>
 				</div>
 				<div class="form-addon__checkbox-wrapper">
 					<div class="form-addon__checkbox">
 						<input type="checkbox" id="alphabets" name="form-addon__checkbox">
 						<label for="alphabets">Alphabets</label>
-						<div class="form-addon__check">
-							<div class="form-addon__inside"></div>
-						</div>
+						<div class="form-addon__check"></div>
 					</div>
 					<div class="form-addon__checkbox">
 						<input type="checkbox" id="numbers" name="form-addon__checkbox">
 						<label for="numbers">Numbers</label>
-						<div class="form-addon__check">
-							<div class="form-addon__inside"></div>
-						</div>
+						<div class="form-addon__check"></div>
 					</div>
 					<div class="form-addon__checkbox">
 						<input type="checkbox" id="questions" name="form-addon__checkbox">
 						<label for="questions">Questions</label>
-						<div class="form-addon__check">
-							<div class="form-addon__inside"></div>
-						</div>
+						<div class="form-addon__check"></div>
 					</div>
 					<div class="form-addon__checkbox">
 						<input type="checkbox" id="prepositions" name="form-addon__checkbox">
 						<label for="prepositions">Prepositions</label>
-						<div class="form-addon__check">
-							<div class="form-addon__inside"></div>
-						</div>
+						<div class="form-addon__check"></div>
 					</div>
 					<div class="form-addon__checkbox">
 						<input type="checkbox" id="custom-text" name="form-addon__checkbox">
 						<label for="custom-text">Custom text</label>
-						<div class="form-addon__check">
-							<div class="form-addon__inside"></div>
-						</div>
+						<div class="form-addon__check"></div>
 					</div>
 				</div>
 			</div>
@@ -112,68 +98,119 @@
 				</div>
 			</div>
 		</div>
-
+		<div class="export-wrapper">
+			<div class="export-btn">Export to CSV</div>
+		</div>
 		<div class="result-wrapper">
-			<div class="export-wrapper">
-				<div class="export-btn">Export to CSV</div>
-			</div>
 			<div class="categories">
 				<div class="categories__header">
 					Categories
-					<!-- FILTER -->
+					<div class="result__filter">
+						<img src="img/ico/filter.png" alt="filter">
+					</div>
 				</div>
 				<div class="categories__item">
 					<input type="checkbox" id="all" name="categories__checkbox">
 					<label for="all">All keywords <span>(32017)</span></label>
-					<div class="categories__check">
-						<div class="categories__inside"></div>
-					</div>
+					<div class="categories__check"></div>
 				</div>
 				<div class="categories__item">
 					<input type="checkbox" id="c2" name="categories__checkbox">
 					<label for="c2">Pakistan <span>(50)</span></label>
-					<div class="categories__check">
-						<div class="categories__inside"></div>
-					</div>
+					<div class="categories__check"></div>
 				</div>
 				<div class="categories__item">
 					<input type="checkbox" id="c3" name="categories__checkbox">
 					<label for="c3">St. Vincent <span>(74)</span></label>
-					<div class="categories__check">
-						<div class="categories__inside"></div>
-					</div>
+					<div class="categories__check"></div>
 				</div>
 				<div class="categories__item">
 					<input type="checkbox" id="c4" name="categories__checkbox">
 					<label for="c4">The Grenadines <span>(14)</span></label>
-					<div class="categories__check">
-						<div class="categories__inside"></div>
-					</div>
+					<div class="categories__check"></div>
 				</div>
 				<div class="categories__item">
 					<input type="checkbox" id="c5" name="categories__checkbox">
 					<label for="c5">Lebanon <span>(8)</span></label>
-					<div class="categories__check">
-						<div class="categories__inside"></div>
-					</div>
+					<div class="categories__check"></div>
 				</div>
 				<div class="categories__item">
 					<input type="checkbox" id="c6" name="categories__checkbox">
 					<label for="c6">Monaco <span>(34)</span></label>
-					<div class="categories__check">
-						<div class="categories__inside"></div>
-					</div>
+					<div class="categories__check"></div>
 				</div>
 				<div class="categories__item">
 					<input type="checkbox" id="c7" name="categories__checkbox">
 					<label for="c7">Eritrea <span>(78)</span></label>
-					<div class="categories__check">
-						<div class="categories__inside"></div>
-					</div>
+					<div class="categories__check"></div>
 				</div>
 			</div>
-			<div class="result">
-				
+			<div class="table-wrapper">
+				<div class="result" id="table">
+					<div class="result__header">
+						<div class="result__cell">
+							<div class="result__switch">
+								<img src="img/ico/arrow-up.svg" alt="up" class="result__up">
+								<img src="img/ico/arrow-down.svg" alt="down" class="result__down">
+							</div>
+							Keyword (total words: 555)
+							<div class="result__filter">
+								<img src="img/ico/filter.png" alt="filter">
+							</div>
+						</div>
+						<div class="result__cell">
+							<div class="result__switch">
+								<img src="img/ico/arrow-up.svg" alt="up" class="result__up">
+								<img src="img/ico/arrow-down.svg" alt="down" class="result__down">
+							</div>
+							Kparser rank
+							<div class="result__filter">
+								<img src="img/ico/filter.png" alt="filter">
+							</div>
+						</div>
+						<div class="result__cell">
+							<div class="result__switch">
+								<img src="img/ico/arrow-up.svg" alt="up" class="result__up">
+								<img src="img/ico/arrow-down.svg" alt="down" class="result__down">
+							</div>
+							Volume
+							<div class="result__filter">
+								<img src="img/ico/filter.png" alt="filter">
+							</div>
+						</div>
+						<div class="result__cell">
+							<div class="result__switch">
+								<img src="img/ico/arrow-up.svg" alt="up" class="result__up">
+								<img src="img/ico/arrow-down.svg" alt="down" class="result__down">
+							</div>
+							CPC (USD)
+							<div class="result__filter">
+								<img src="img/ico/filter.png" alt="filter">
+							</div>
+						</div>
+						<div class="result__cell"></div>
+					</div>
+					<div class="result__row">
+						<div class="result__cell">Azerbaijan</div>
+						<div class="result__cell">21</div>
+						<div class="result__cell">28</div>
+						<div class="result__cell">37</div>
+						<div class="result__cell">
+							<input type="checkbox" id="a1" name="result__checkbox">
+							<div class="result__check"></div>
+						</div>
+					</div>
+					<div class="result__row">
+						<div class="result__cell">Azerbaijan</div>
+						<div class="result__cell">21</div>
+						<div class="result__cell">28</div>
+						<div class="result__cell">37</div>
+						<div class="result__cell">
+							<input type="checkbox" id="a1" name="result__checkbox">
+							<div class="result__check"></div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

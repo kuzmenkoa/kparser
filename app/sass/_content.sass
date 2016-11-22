@@ -311,29 +311,29 @@
 						&:hover
 							background-color: $darkblue
 
+		.export-wrapper
+			display: flex
+			justify-content: flex-end
+			margin: 20px 0
+			width: 100%
+
+			.export-btn
+				display: flex
+				justify-content: center
+				align-items: center
+				width: 138px
+				height: 35px
+				color: #fff
+				font-size: 15px
+				font-weight: 500
+				background-color: $lightblue
+				cursor: pointer
+				&:hover
+					background-color: $darkblue
+
 		.result-wrapper
 			display: flex
-			flex-wrap: wrap
-
-			.export-wrapper
-				display: flex
-				justify-content: flex-end
-				margin: 20px 0
-				width: 100%
-
-				.export-btn
-					display: flex
-					justify-content: center
-					align-items: center
-					width: 138px
-					height: 35px
-					color: #fff
-					font-size: 15px
-					font-weight: 500
-					background-color: $lightblue
-					cursor: pointer
-					&:hover
-						background-color: $darkblue
+			width: 100%
 
 			.categories
 				max-width: 300px
@@ -421,6 +421,116 @@
 						box-shadow: inset 0 -1px 0 #4ba051
 						opacity: 0
 						content: url("../img/ico/check.png")
-
-			.result
+			
+			.table-wrapper
+				margin-left: 20px
 				width: 100%
+
+				.result
+					display: table
+					width: 100%
+
+					.result__header,
+					.result__row
+						display: table-row
+						box-sizing: border-box
+						border-right: 1px solid #ebf0f4
+						&:last-child
+							border: none
+
+					.result__header
+						height: 46px
+						background-color: $verylightgray
+						box-shadow: inset 0 -1px 0 #ebf0f4
+						color: #303d80
+						font-size: 14px
+						font-weight: 500
+
+						.result__cell
+							.result__switch
+								display: inline-block
+								margin-right: 3px
+								vertical-align: middle
+
+								.result__up
+									display: block
+									margin-bottom: 6px
+									cursor: pointer
+									&:hover
+										opacity: 0.8
+
+								.result__down
+									display: block
+									margin-top: 6px
+									cursor: pointer
+									&:hover
+										opacity: 0.8
+
+					.result__row
+						position: relative
+						background-color: #fff
+						cursor: pointer
+						&--selected
+							.result__cell
+								color: #7c7f80 !important
+						&:hover
+							.result__check::before
+								opacity: 0.5
+
+						.result__cell
+							color: #bcc0c2
+							font-size: 14px
+							height: 52px
+
+					.result__cell
+						position: relative
+						display: table-cell
+						padding: 0 20px
+						box-sizing: border-box
+						vertical-align: middle
+
+						input
+							position: absolute
+							visibility: hidden
+						
+						input:checked ~ .result__check::before
+							opacity: 1
+
+						input:checked ~ label
+							color: #7c7f80
+
+						.result__check
+							position: relative
+							display: inline-block
+							width: 21px
+							height: 21px
+							background-color: #dde3e7
+							box-shadow: inset 0 1px 0 #bcc3c9
+
+						.result__check::before 
+							display: flex
+							justify-content: center
+							align-items: center
+							position: absolute
+							margin: auto
+							top: 3px
+							left: 3px
+							width: 15px
+							height: 15px
+							background-color: $green
+							box-shadow: inset 0 -1px 0 #4ba051
+							opacity: 0
+							content: url("../img/ico/check.png")
+
+			.result__filter
+				display: inline-block
+				margin-left: 3px
+				width: 17px
+				height: 17px
+				line-height: 17px
+				background-color: #bcc3c9
+				border-radius: 50%
+				text-align: center
+				cursor: pointer
+				&:hover
+					background-color: #6980af
