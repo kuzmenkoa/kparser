@@ -434,6 +434,7 @@
 					right: 7px
 					z-index: 1
 					display: flex
+					display: none
 					align-items: center
 					flex-direction: column
 					text-align: center
@@ -670,8 +671,11 @@
 							&--active
 								color: #5f84cf
 								font-weight: 700
+							&:hover
+								opacity: 0.8
 
-			.result__filter
+			.filter
+				position: relative
 				display: inline-block
 				margin-left: 3px
 				width: 17px
@@ -683,3 +687,102 @@
 				cursor: pointer
 				&:hover
 					background-color: #6980af
+					&::before
+						position: absolute
+						top: 0
+						right: -11px
+						width: 700%
+						height: 40px
+						color: red
+						content: ''
+					.filter__expand
+						display: flex
+
+				.filter__expand
+					position: absolute
+					z-index: 10
+					top: 30px
+					right: -11px
+					display: none
+					flex-direction: column
+					box-sizing: border-box
+					padding: 20px
+					width: 200px
+					height: auto
+					background-color: #6980af
+					color: #fff
+					&--categories
+						right: auto
+						left: -11px
+						&::before
+							right: auto
+							left: 10px
+					&::before
+						position: absolute
+						top: -5px
+						right: 10px
+						width: 0
+						height: 0
+						border-left: 10px solid transparent
+						border-right: 10px solid transparent
+						border-bottom: 10px solid #6980af
+						transform: translate(0, -50%)
+						content: ''
+
+					.filter__header
+						color: #fff
+						font-size: 15px
+						font-weight: 700
+						text-align: left
+
+					input
+						position: static !important
+						visibility: visible !important
+						box-sizing: border-box
+						border: 1px solid #fff
+						outline: none
+						color: #fff
+						background-color: transparent
+
+					.filter__search-wrapper
+						display: flex
+						margin-top: 15px
+
+						input
+							width: 90%
+							height: 20px
+							border-right: none
+
+					.filter__inputs-wrapper
+						display: flex
+						flex-wrap: wrap
+						margin: 15px 0
+
+						label
+							width: 30%
+							color: #fff
+							margin: 5px 0
+							text-align: left
+
+						input
+							margin: 5px 0
+							width: 70%
+
+					.filter__btn
+						position: relative
+						align-self: flex-end
+						display: flex
+						justify-content: center
+						align-items: center
+						width: 70px
+						height: 25px
+						background-color: $green
+						box-shadow: 0 1px 2px rgba(0, 1, 3, 0.3)
+						color: #fff
+						font-size: 14px
+						font-weight: 500
+						&--search
+							width: 38px
+							height: 20px
+						&:hover
+							background-color: $darkgreen
