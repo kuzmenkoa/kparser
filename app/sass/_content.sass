@@ -628,6 +628,49 @@
 							opacity: 0
 							content: url("../img/ico/check.png")
 
+				.pagination
+					display: flex
+					justify-content: space-between
+					align-items: center
+					margin-top: 15px
+					width: 100%
+
+					.pagination__per-page
+						color: #939597
+						font-size: 14px
+
+						span
+							font-weight: 700
+
+					.pagination__switcher
+						display: flex
+						align-items: center
+
+						.pagination__left,
+						.pagination__right
+							display: flex
+							justify-content: center
+							align-items: center
+							width: 22px
+							height: 21px
+							background-color: #bcc3c9
+							cursor: pointer
+							&:hover
+								opacity: 0.8
+
+						.pagination__page,
+						.pagination__divider
+							font-size: 16px
+							color: #8f9293
+							font-weight: 500
+
+						.pagination__page
+							margin: 0 10px
+							cursor: pointer
+							&--active
+								color: #5f84cf
+								font-weight: 700
+
 			.result__filter
 				display: inline-block
 				margin-left: 3px
