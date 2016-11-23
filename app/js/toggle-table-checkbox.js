@@ -1,5 +1,5 @@
 function toggleTableCheckbox() {
-	var table = document.getElementsByClassName('result')[0];
+	var table = document.querySelector('.result');
 	table.onclick = function(event) {
 		var target = event.target;
 		var className;
