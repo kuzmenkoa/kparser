@@ -6,6 +6,8 @@
 			font-size: 36px
 			font-weight: 700
 			text-align: center
+			@media #{$mobile}
+				margin: 80px 20px
 
 		.form
 			display: flex
@@ -644,7 +646,10 @@
 						&--selected
 							.result__cell
 								color: #7c7f80 !important
-								background-color: $verylightgray
+						@media #{$mobile}
+							&--selected
+								.result__cell
+									background-color: $verylightgray
 						&:hover
 							background-color: $verylightgray
 							.result__check::before
