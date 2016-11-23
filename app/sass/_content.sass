@@ -173,19 +173,27 @@
 			&::before
 				position: absolute
 				top: -13px
-				left: 245px
+				left: 80px
 				width: 0
 				height: 0
 				border-right: 10px solid transparent
 				border-bottom: 10px solid #bcc3c9
 				border-left: 10px solid transparent
 				content: ''
+			&--words
+				&::before
+					left: 80px
+			&--filter
+				&::before
+					left: 253px
 			@media #{$mobile}
 				&::before
 					display: none
 
+			.form-addon--show
+				display: flex !important
+
 			.form-addon__words
-				display: flex
 				display: none
 				padding: 20px
 				box-sizing: border-box
@@ -319,8 +327,7 @@
 							content: url("../img/ico/check.png")
 
 			.form-addon__filter
-				display: flex
-				// display: none
+				display: none
 				justify-content: space-between
 				flex-wrap: wrap
 				padding: 20px

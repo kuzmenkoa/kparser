@@ -98,16 +98,16 @@
 			</div>
 		</div>
 		<div class="form-addon-tabs">
-			<div class="form-addon-tabs__tab">
+			<div class="form-addon-tabs__tab form-addon-tabs__tab--words form-addon-tabs__tab--active">
 				Additional words
 			</div>
 			<div class="form-addon-tabs__divider"></div>
-			<div class="form-addon-tabs__tab form-addon-tabs__tab--active">
+			<div class="form-addon-tabs__tab form-addon-tabs__tab--filter">
 				Advanced filter
 			</div>
 		</div>
 		<div class="form-addon">
-			<div class="form-addon__words">
+			<div class="form-addon__words form-addon--show">
 				<div class="form-addon__radio-wrapper">
 					<div class="form-addon__radio">
 						<input type="radio" id="radio-before" name="form-addon__radio" checked>
@@ -407,10 +407,13 @@
 					</div>
 				</div>
 				<div class="pagination">
-					<div class="pagination__per-page">
+					<!-- <div class="pagination__per-page">
 						Show: <span>10</span>
 						<img src="img/ico/arrow-right-blue.svg" alt="right">
-					</div>
+					</div> -->
+					<select name="per-page" id="per-page" class="pagination__per-page">
+						
+					</select>
 					<div class="pagination__switcher">
 						<div class="pagination__left">
 							<img src="img/ico/arrow-left-white.svg" alt="left">
