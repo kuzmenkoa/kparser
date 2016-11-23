@@ -18,21 +18,33 @@
 			background-color: #fff
 			border: 1px solid rgba(214, 214, 214, 0.2)
 			box-shadow: 0 0 7px rgba(0, 48, 40, 0.05)
+			@media #{$mobile}
+				flex-direction: column
+				height: auto
 
 			.form__search
 				box-sizing: border-box
 				margin-right: 18px
 				width: 100%
-				height: 100%
+				height: 48px
 				color: #292929
 				font-weight: 500
 				border: none
 				outline: none
+				@media #{$mobile}
+					margin-right: 0
+					margin-bottom: 10px
+					padding: 0 18px
+					border: 1px solid #ebf0f4
 			
 			.form__btns
 				display: flex
 				align-items: center
-				height: 100%
+				height: 48px
+				@media #{$mobile}
+					flex-direction: column
+					width: 100%
+					height: auto
 
 				.form__select
 					display: flex
@@ -42,13 +54,18 @@
 					padding: 18px
 					white-space: nowrap
 					margin-right: 18px
-					height: 100%
+					height: 48px
 					color: $lightgray
 					font-size: 15px
 					background-color: $verylightgray
 					cursor: pointer
 					&:hover
 						background-color: $highlightgray
+					@media #{$mobile}
+						justify-content: space-between
+						margin-right: 0
+						margin-bottom: 10px
+						width: 100%
 
 					img
 						margin-left: 18px
@@ -58,11 +75,13 @@
 					justify-content: center
 					align-items: center
 					width: 60px
-					height: 100%
+					height: 48px
 					background-color: $green
 					cursor: pointer
 					&:hover
 						background-color: $darkgreen
+					@media #{$mobile}
+						width: 100%
 
 					img
 						width: 16px
@@ -118,20 +137,28 @@
 				border-bottom: 10px solid #bcc3c9
 				border-left: 10px solid transparent
 				content: ''
+			@media #{$mobile}
+				&::before
+					display: none
 
 			.form-addon__words
-				// display: flex
-				display: none
+				display: flex
+				// display: none
 				padding: 20px
 				box-sizing: border-box
 				justify-content: space-between
 				width: 100%
 				height: 67px
+				@media #{$mobile}
+					flex-direction: column
+					height: auto
 
 				.form-addon__radio-wrapper
 					display: flex
 					align-items: center
 					height: 100%
+					@media #{$mobile}
+						height: auto
 
 					.form-addon__radio
 						position: relative
@@ -188,17 +215,23 @@
 					display: flex
 					align-items: center
 					height: 100%
+					@media #{$mobile}
+						flex-direction: column
+						margin-top: 20px
 
 					.form-addon__checkbox
 						position: relative
 						display: flex
+						margin-left: 40px
 						align-items: center
 						height: 21px
-						&:not(:first-child)
-							margin-left: 40px
 						&:hover
 							.form-addon__check::before
 								opacity: 0.5
+						@media #{$mobile}
+							margin-top: 5px
+							margin-left: 0
+							width: 100%
 
 						input
 							position: absolute
@@ -210,6 +243,8 @@
 							z-index: 9
 							padding-left: 32px
 							cursor: pointer
+							@media #{$mobile}
+								width: 100%
 						
 						input:checked ~ .form-addon__check::before
 							opacity: 1
@@ -241,13 +276,16 @@
 							content: url("../img/ico/check.png")
 
 			.form-addon__filter
-				display: flex
+				// display: flex
+				display: none
 				justify-content: space-between
 				flex-wrap: wrap
 				padding: 20px
 				box-sizing: border-box
 				width: 100%
 				height: 100%
+				@media #{$mobile}
+					flex-direction: column
 
 				.form-addon__col
 					display: flex
@@ -261,6 +299,16 @@
 						margin-top: 20px
 						width: 100%
 						align-items: flex-end
+					@media #{$mobile}
+						&:nth-child(2)
+							flex: 1
+							margin: 20px 0
+						&:nth-child(3)
+							flex: 1
+						&:nth-child(4)
+							margin-top: 20px
+							width: 100%
+							align-items: flex-end
 
 					.form-addon__header
 						margin-bottom: 17px
@@ -334,13 +382,16 @@
 		.result-wrapper
 			display: flex
 			width: 100%
+			@media #{$mobile}
+				flex-direction: column
 
 			.categories
-				max-width: 300px
-				width: 100%
+				width: 300px
 				height: 100%
 				background-color: $verylightgray
 				box-shadow: 0 0 7px rgba(0, 48, 40, 0.05)
+				@media #{$mobile}
+					width: 100%
 
 				.categories__header
 					display: flex
@@ -427,6 +478,9 @@
 				position: relative
 				margin-left: 20px
 				width: 100%
+				@media #{$mobile}
+					margin-top: 20px
+					margin-left: 0
 
 				.hint
 					position: absolute
@@ -434,7 +488,7 @@
 					right: 7px
 					z-index: 1
 					display: flex
-					display: none
+					// display: none
 					align-items: center
 					flex-direction: column
 					text-align: center
@@ -459,6 +513,10 @@
 						border-bottom: 35px solid transparent
 						transform: translate(0, -50%)
 						content: ''
+					@media #{$mobile}
+						font-size: 14px
+						&::before
+							display: none
 
 					.hint__header
 						margin-bottom: 40px
@@ -535,6 +593,8 @@
 				.result
 					display: table
 					width: 100%
+					@media #{$mobile}
+						display: block
 
 					.result__header,
 					.result__row
@@ -551,6 +611,8 @@
 						color: #303d80
 						font-size: 14px
 						font-weight: 500
+						@media #{$mobile}
+							display: none
 
 						.result__cell
 							.result__switch
@@ -583,11 +645,14 @@
 							background-color: $verylightgray
 							.result__check::before
 								opacity: 0.5
+						@media #{$mobile}
+							display: block
+							border-bottom: 1px solid #e3e8ec
 
 						.result__cell
 							color: #bcc0c2
 							font-size: 14px
-							height: 52px
+							height: 53px
 
 					.result__cell
 						position: relative
@@ -595,6 +660,30 @@
 						padding: 0 20px
 						box-sizing: border-box
 						vertical-align: middle
+						@media #{$mobile}
+							display: flex
+							align-items: center
+							padding-left: 50%
+							&::before
+								position: absolute
+								left: 0
+								top: 0
+								display: flex
+								align-items: center
+								padding: 0 20px
+								box-sizing: border-box
+								width: 50%
+								height: 100%
+								font-weight: 500
+								content: ''
+							&:nth-of-type(1)::before
+								content: 'Keyword'
+							&:nth-of-type(2)::before
+								content: 'Kparser rank'
+							&:nth-of-type(3)::before
+								content: 'Volume'
+							&:nth-of-type(4)::before
+								content: 'CPC (USD)'
 
 						input
 							position: absolute

@@ -2,10 +2,15 @@ header
 	height: 56px
 	border-bottom: 2px solid #dce5ec
 	font-size: 16px
+	@media #{$mobile}
+		height: auto
 
 	.wrapper
 		display: flex
 		justify-content: space-between
+		@media #{$mobile}
+			flex-direction: column
+			align-items: center
 
 		.header__logo
 			display: flex
@@ -21,24 +26,40 @@ header
 			display: flex
 			align-items: center
 			color: $darkgray
+			@media #{$mobile}
+				width: 100%
+				order: 2
+			@media #{$micro}
+				flex-direction: column
 
 			.header__btn
 				display: flex
+				justify-content: center
 				align-items: center
 				padding: 0 10px
 				height: 56px
 				color: inherit
+				text-align: center
 				text-decoration: none
 				cursor: pointer
 				&--active,
 				&:hover
 					color: #fff
 					background-color: $lightblue
+				@media #{$mobile}
+					width: 33.33%
+				@media #{$micro}
+					width: 100%
 
 		.header__sign
 			display: flex
+			justify-content: center
 			align-items: center
 			font-style: italic
+			@media #{$mobile}
+				width: 100%
+				height: 56px
+				order: 1
 
 			.header__link
 				text-decoration: none
