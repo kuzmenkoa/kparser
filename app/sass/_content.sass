@@ -362,8 +362,11 @@
 		.export-wrapper
 			display: flex
 			justify-content: flex-end
+			box-sizing: border-box
 			margin: 20px 0
 			width: 100%
+			@media #{$mobile}
+				padding: 0 20px
 
 			.export-btn
 				display: flex
@@ -641,6 +644,7 @@
 						&--selected
 							.result__cell
 								color: #7c7f80 !important
+								background-color: $verylightgray
 						&:hover
 							background-color: $verylightgray
 							.result__check::before
@@ -722,8 +726,13 @@
 					display: flex
 					justify-content: space-between
 					align-items: center
+					box-sizing: border-box
 					margin-top: 15px
 					width: 100%
+					@media #{$mobile}
+						padding: 0 20px
+					@media #{$micro}
+						flex-direction: column
 
 					.pagination__per-page
 						color: #939597
@@ -735,6 +744,8 @@
 					.pagination__switcher
 						display: flex
 						align-items: center
+						@media #{$micro}
+							margin-top: 10px
 
 						.pagination__left,
 						.pagination__right
