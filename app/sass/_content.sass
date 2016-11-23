@@ -788,13 +788,29 @@
 						padding: 0 20px
 					@media #{$micro}
 						flex-direction: column
-
-					.pagination__per-page
-						color: #939597
+					
+					.pagination__per-page-wrapper
 						font-size: 14px
-
-						span
+						color: #939597
+						
+						.pagination__per-page
+							padding-right: 10px
+							background-color: transparent
+							border: none
+							outline: none
 							font-weight: 700
+							font-size: 14px
+							color: #939597
+							background-image: url("../img/ico/arrow-right-blue.svg")
+							background-repeat: no-repeat
+							background-position: 100% 50%
+							cursor: pointer
+							-webkit-appearance: none
+							-moz-appearance: none
+							appearance: none
+							&::-ms-expand
+								display: none
+								visibility: hidden
 
 					.pagination__switcher
 						display: flex
