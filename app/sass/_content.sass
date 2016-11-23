@@ -57,7 +57,6 @@
 					padding: 18px
 					white-space: nowrap
 					margin-right: 18px
-					min-width: 140px
 					height: 48px
 					color: $lightgray
 					font-size: 15px
@@ -67,6 +66,10 @@
 						background-color: $highlightgray
 						.form__expand
 							display: block
+					&:nth-child(3)
+						.form__expand
+							right: 0
+							left: auto
 					@media #{$mobile}
 						margin-right: 0
 						margin-bottom: 10px
@@ -82,7 +85,7 @@
 						left: 0
 						z-index: 11
 						box-sizing: border-box
-						width: 100%
+						width: auto
 						height: auto
 						background-color: $highlightgray
 						border-bottom: 1px solid #e3e8ec
@@ -183,7 +186,7 @@
 
 			.form-addon__words
 				display: flex
-				// display: none
+				display: none
 				padding: 20px
 				box-sizing: border-box
 				justify-content: space-between
@@ -316,8 +319,8 @@
 							content: url("../img/ico/check.png")
 
 			.form-addon__filter
-				// display: flex
-				display: none
+				display: flex
+				// display: none
 				justify-content: space-between
 				flex-wrap: wrap
 				padding: 20px
@@ -702,7 +705,7 @@
 							height: 53px
 							@media #{$mobile}
 								height: 35px
-								
+
 					.result__cell
 						position: relative
 						display: table-cell
